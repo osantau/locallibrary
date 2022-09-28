@@ -18,7 +18,7 @@ class Genre(models.Model):
 
 class Language(models.Model):
     name = models.CharField(
-        max_length=200, help_text='Enter the book natural language(e.g English, French, Japanese etc.')
+        max_length=200, unique=True, help_text='Enter the book natural language(e.g English, French, Japanese etc.')
 
     def __str__(self):
         return self.name
